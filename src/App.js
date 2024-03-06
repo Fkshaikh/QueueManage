@@ -1,11 +1,14 @@
-import { ThemeProvider } from "@emotion/react";
 import React from "react";
 import theme from "./theme";
+import Home from "./Components/Home";
+import { ThemeProvider } from "@mui/material";
 
 function App() {
   return (
-    <ThemeProvider value={theme}>
-      <div className="App">hi</div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <Home />
+      </div>
     </ThemeProvider>
   );
 }

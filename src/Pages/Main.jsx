@@ -7,8 +7,8 @@ import NavBar from "../Components/NavBar";
 const Main = () => {
   return (
     <div>
-      <NavBar />
-      <QueDetailedPage />
+    
+      Home
     </div>
   );
 };

@@ -4,7 +4,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import AccessAlarmsIcon from "@mui/icons-material/AccessAlarms";
 import DoneIcon from "@mui/icons-material/Done";
 import CustomDrawer from "../Components/Drawer/CustomDrawer";
-import { Box, Card, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import CustomCards from "../Components/Drawer/CustomCards";
 import UserGroups from "../Components/UserGroups";
 const QueDetailedPage = () => {

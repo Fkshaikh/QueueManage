@@ -1,4 +1,4 @@
-import { Box, Card, Typography, styled, useTheme } from "@mui/material";
+import { Box, Card, Typography, styled } from "@mui/material";
 import React from "react";
 import FlexBox from "../FlexBox";
 
@@ -19,7 +19,6 @@ const StyledTypography = styled(Typography)`
   padding: 3px;
 `;
 const CustomCards = () => {
-  const theme = useTheme();
   return (
     <Box sx={{ width: "100%" }}>
       <FlexBox>

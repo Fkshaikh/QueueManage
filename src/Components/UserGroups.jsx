@@ -5,10 +5,16 @@ import {
   useTheme,
 } from "@mui/material";
 import React, { useState } from "react";
+import CustomTable from "./CustomTable";
 
 const UserGroups = () => {
   const [isSelected, setisSelected] = useState(0);
   const theme = useTheme();
+  const customTableData = [
+    { header: "Faisal Shaikh", subText: "Group1", time: "11:00 AM" },
+    { header: "John Doe", subText: "Group2", time: "2:30 PM" },
+    { header: "Jane Smith", subText: "Group3", time: "5:00 PM" },
+  ];
   return (
     <div>
       <ToggleButtonGroup
@@ -65,6 +71,25 @@ const UserGroups = () => {
           </Typography>
         </ToggleButton>
       </ToggleButtonGroup>
+      {isSelected === 0 ? (
+        <>
+          {" "}
+          {customTableData.map((data, index) => (
+            <CustomTable
+              key={index}
+              header={data?.header}
+              subText={data?.subText}
+              time={data?.time}
+            />
+          ))}
+        </>
+      ) : (
+        <>
+          {customTableData.map((data, index) => (
+            <CustomTable key={index} header={data?.header} time={data?.time} />
+          ))}
+        </>
+      )}
     </div>
   );
 };

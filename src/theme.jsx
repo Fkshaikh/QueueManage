@@ -12,6 +12,7 @@ const theme = createTheme({
     text2: "#FFFFFF",
     text3: "#A1824A",
     bg1: "#FFFFFF",
+    bg2: "#FBFAF7",
   },
   typography: {
     fontFamily: "Plus Jakarta Sans, sans-serif",
@@ -32,7 +33,7 @@ const theme = createTheme({
       fontSize: "1.25rem",
     },
     h5: {
-      fontSize: "1rem",
+      fontSize: "0.9rem",
     },
     h6: {
       fontSize: "0.7rem",

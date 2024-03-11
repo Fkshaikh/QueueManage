@@ -25,8 +25,14 @@ const NavBar = () => {
   };
   return (
     <div>
-      <AppBar position="static" sx={{ backgroundColor: theme.palette.bg1 }}>
-        <Container maxWidth="xl">
+      <AppBar
+        position="fixed"
+        sx={{
+          backgroundColor: theme.palette.bg1,
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+        }}
+      >
+        <Container maxWidth>
           <Toolbar
             disableGutters
             sx={{
@@ -48,7 +54,10 @@ const NavBar = () => {
                 href="#app-bar-with-responsive-menu"
                 sx={{
                   mr: 2,
-                  display: { xs: "none", md: "flex" },
+                  display: {
+                    xs: "none",
+                    md: "flex",
+                  },
                   color: theme.palette.text1,
                   textDecoration: "none",
                 }}
@@ -111,7 +120,7 @@ const NavBar = () => {
                   sx={{
                     color: theme.palette.text2,
                     backgroundColor: theme.palette.primary.main,
-                    borderRadius: "10px",
+                    borderRadius: "5px",
                     "&:hover": {
                       color: theme.palette.text1,
                     },
@@ -133,7 +142,7 @@ const NavBar = () => {
                   sx={{
                     color: theme.palette.text1,
                     backgroundColor: theme.palette.secondary.main,
-                    borderRadius: "10px",
+                    borderRadius: "5px",
                   }}
                 >
                   <Typography variant="h6">Settings</Typography>

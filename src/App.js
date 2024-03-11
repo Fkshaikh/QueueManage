@@ -1,13 +1,22 @@
 import React from "react";
 import theme from "./theme";
-import Home from "./Components/Home";
 import { ThemeProvider } from "@mui/material";
+import Main from "./Pages/Main";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from "./Components/NavBar";
+import QueDetailedPage from "./Pages/QueDetailedPage";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Home />
+        <NavBar />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" Component={Main} />
+            <Route path="/quedetail" Component={QueDetailedPage} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </ThemeProvider>
   );

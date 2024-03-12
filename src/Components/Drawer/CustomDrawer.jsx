@@ -74,7 +74,7 @@ const CustomDrawer = ({
             mt: "20px",
           }}
         >
-          {avatarContent && <Avatar>{avatarContent}</Avatar>}
+          {avatarContent && <Avatar  sx={{ bgcolor: theme.palette.primary.main }}>{avatarContent}</Avatar>}
           <Box>
             {title && <Typography>{title}</Typography>}
             {subtitle && (

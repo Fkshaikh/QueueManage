@@ -108,47 +108,6 @@ const NavBar = () => {
                 alignItems: "center",
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: "10px",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <Button
-                  sx={{
-                    color: theme.palette.text2,
-                    backgroundColor: theme.palette.primary.main,
-                    borderRadius: "5px",
-                    "&:hover": {
-                      color: theme.palette.text1,
-                    },
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      "&:hover": {
-                        color: theme.palette.text1,
-                      },
-                    }}
-                  >
-                    Add Task
-                  </Typography>
-                </Button>
-                <Button
-                  color="secondary"
-                  sx={{
-                    color: theme.palette.text1,
-                    backgroundColor: theme.palette.secondary.main,
-                    borderRadius: "5px",
-                  }}
-                >
-                  <Typography variant="h6">Settings</Typography>
-                </Button>
-              </Box>
-
               <Tooltip
                 title="Profile"
                 PopperProps={{
@@ -156,7 +115,9 @@ const NavBar = () => {
                 }}
               >
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar>H</Avatar>
+                  <Avatar sx={{ bgcolor: theme.palette.primary.main }}>
+                    H
+                  </Avatar>
                 </IconButton>
               </Tooltip>
               <Menu
